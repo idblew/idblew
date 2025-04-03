@@ -1,0 +1,27 @@
+name: Update Badges
+
+on:
+  schedule:
+    # Runs at 2am UTC
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log Level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags' 
+jobs:
+  update-readme:
+    name: Update README.md with Credly Badges
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Badges - Readme
+        uses: pemtajo/badge-readme@main
+        with:
+          BADGE_SIZE: 200
+          CREDLY_USER: ian-blew
+          NUMBER_LAST_BADGES: 12
