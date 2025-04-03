@@ -15,6 +15,6 @@ jobs:
       - name: Badges - Readme
         uses: pemtajo/badge-readme@main
         with:
-          BADGE_SIZE: 200
+          BADGE_SIZE: 150
           CREDLY_USER: ian-blew
-          NUMBER_LAST_BADGES: 12
+          NUMBER_LAST_BADGES: 10
